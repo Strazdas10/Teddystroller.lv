@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "name": "teddystraler",
+  "build": {
+    "command": "npm run build",
+    "output_directory": ".next",
+    "root_directory": "/"
+  },
+  "routes": [
+    {
+      "pattern": "/_next/static/*",
+      "cache": {
+        "browser_ttl": 31536000,
+        "edge_ttl": 31536000
+      }
+    },
+    {
+      "pattern": "/static/*",
+      "cache": {
+        "browser_ttl": 31536000,
+        "edge_ttl": 31536000
+      }
+    }
+  ]
+}
