@@ -4,28 +4,31 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="bg-gray-50 dark:bg-gray-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Welcome to Teddy Straler
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                Your vision, our expertise. Let's create something amazing together.
-              </p>
-              <a
-                href="#contact"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300"
-              >
-                Get Started
-              </a>
-            </div>
-            <div className="md:w-1/2">
-              <div className="bg-gray-200 dark:bg-gray-700 rounded-lg h-80 flex items-center justify-center">
-                <p className="text-gray-500 dark:text-gray-400">Hero Image Placeholder</p>
-              </div>
-            </div>
+      <section id="home" className="relative min-h-screen">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero/IMG_9627.jpeg"
+            alt="Teddy Stroller Hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"></div>
+        </div>
+        <div className="relative z-10 h-full w-full flex items-end">
+          <div className="p-8 md:p-20 pb-20 max-w-xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#f9d6a4] mb-4">
+              Welcome to Teddy Stroller
+            </h1>
+            <p className="text-xl text-[#f9d6a4] mb-8">
+              Your vision, our expertise. Let's create something amazing together.
+            </p>
+            <a
+              href="#contact"
+              className="inline-block bg-[#f9d6a4] text-gray-900 font-medium py-3 px-10 rounded-md hover:opacity-90 transition-custom text-lg"
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </section>

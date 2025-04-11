@@ -16,10 +16,10 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-800 dark:text-white">
-              Teddy Straler
+              Teddy Stroller
             </Link>
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/" className="px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
@@ -35,7 +35,7 @@ export default function Navigation() {
               Contact
             </Link>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button

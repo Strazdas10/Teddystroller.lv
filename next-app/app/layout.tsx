@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Teddy Straler | Professional Services",
-  description: "Teddy Straler offers professional services to help your business grow. Contact us today to learn more.",
+  title: "Teddy Stroller | Professional Services",
+  description: "Teddy Stroller offers professional services to help your business grow. Contact us today to learn more.",
 };
 
 import Navigation from './components/Navigation';
