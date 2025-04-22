@@ -3,114 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teddy Straler</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Teddy Stroller</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url('next-app/public/images/hero/IMG_9627.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Reduced opacity for a brighter image */
+            background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            padding: 0 0 80px 80px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #f9d6a4;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #f9d6a4;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #f9d6a4;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Teddy Straler</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Teddy Straler</h1>
-                <p>Your vision, our expertise. Let's create something amazing together.</p>
-                <button class="cta-button">Get Started</button>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>We are a passionate team dedicated to delivering high-quality solutions that meet your needs and exceed your expectations.</p>
-                    <p>With years of experience in the industry, we have the knowledge and skills to bring your ideas to life.</p>
-                </div>
-                <div class="about-image">
-                    <!-- Placeholder for an image -->
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Web Design</h3>
-                    <p>Beautiful, responsive websites tailored to your brand.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Development</h3>
-                    <p>Custom web applications built with the latest technologies.</p>
-                </div>
-                <div class="service-card">
-                    <h3>SEO</h3>
-                    <p>Optimize your online presence and reach more customers.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Consulting</h3>
-                    <p>Expert advice to help your business grow online.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Teddy Straler</div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">LinkedIn</a>
+    <div class="hero">
+        <div class="overlay"></div>
+        <!-- Instagram link and phone in top right -->
+        <div style="position: absolute; top: 20px; right: 20px; z-index: 20; display: flex; flex-direction: column; align-items: flex-end;">
+            <a href="https://www.instagram.com/teddystroller.lv?igsh=cWc3MXA5bjBqdXNj" style="display: inline-flex; align-items: center; color: #f9d6a4; text-decoration: none; font-weight: 500; margin-bottom: 10px;" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
+                </svg>
+                Follow us on Instagram
+            </a>
+            <div style="color: #f9d6a4; font-weight: 500;">
+                Mob: +371 23554580
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Teddy Straler. All rights reserved.</p>
+        <div class="content">
+            <h1>Welcome to Teddy Stroller</h1>
+            <p>Let's travel the world together.</p>
+            <a href="booking.html" class="button">Get Started</a>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
