@@ -180,7 +180,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -267,21 +267,50 @@
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 15px;
+            }
+
+            .service-card h3 {
+                font-size: 20px;
+            }
+
+            .service-card p {
+                font-size: 16px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .booking-form {
-                grid-template-columns: 1fr;
+            .calendar-section, .contact-section {
+                position: static;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
             }
 
-            .calendar {
-                grid-column: span 1;
-            }
-
-            .form-submit {
-                grid-column: span 1;
+            .services-section {
+                position: static !important;
+                margin-top: 20px;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding-bottom: 40px;
+            }
+
+            .container {
+                padding: 40px 20px;
             }
         }
     </style>
@@ -293,7 +322,20 @@
         <a href="index.html" class="nav-link">Back to Home</a>
 
         <div class="container">
-            <h1 style="margin-top: 40px;">Book Your Teddy Stroller</h1>
+
+
+            <!-- Instagram link and mobile in top right -->
+            <div style="position: absolute; top: 120px; right: 20px; display: flex; flex-direction: column; align-items: flex-end;">
+                <a href="https://www.instagram.com/teddystroller" style="display: inline-flex; align-items: center; color: #f9d6a4; text-decoration: none; font-weight: 500; margin-bottom: 10px;" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
+                    </svg>
+                    Follow us on Instagram
+                </a>
+                <div style="color: #f9d6a4; font-weight: 500;">
+                    Mob: +371 23554580
+                </div>
+            </div>
 
             <!-- Services Section directly on hero image -->
             <section class="services-section" style="position: absolute; bottom: 60px; left: 0; right: 0;">
@@ -318,138 +360,9 @@
         </div>
     </div>
 
-    <!-- Booking Section (outside hero) -->
-    <section class="booking-section">
-        <div class="container">
-            <h2>Reserve Your Stroller</h2>
-            <form class="booking-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="destination">Destination</label>
-                    <input type="text" id="destination" name="destination" required>
-                </div>
-
-                <div class="calendar" style="max-width: 600px; margin: 0 auto;">
-                    <div class="calendar-header">
-                        <button type="button" class="button" style="padding: 6px 12px; font-size: 14px;">Previous</button>
-                        <h3 style="margin: 0; font-size: 20px;">June 2024</h3>
-                        <button type="button" class="button" style="padding: 6px 12px; font-size: 14px;">Next</button>
-                    </div>
-
-                    <div class="calendar-grid" style="font-size: 14px;">
-                        <!-- Day headers -->
-                        <div class="calendar-day">Sun</div>
-                        <div class="calendar-day">Mon</div>
-                        <div class="calendar-day">Tue</div>
-                        <div class="calendar-day">Wed</div>
-                        <div class="calendar-day">Thu</div>
-                        <div class="calendar-day">Fri</div>
-                        <div class="calendar-day">Sat</div>
-
-                        <!-- First week (empty days + days) -->
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day">1</div>
-
-                        <!-- Second week -->
-                        <div class="calendar-day">2</div>
-                        <div class="calendar-day">3</div>
-                        <div class="calendar-day">4</div>
-                        <div class="calendar-day">5</div>
-                        <div class="calendar-day">6</div>
-                        <div class="calendar-day">7</div>
-                        <div class="calendar-day">8</div>
-
-                        <!-- Third week -->
-                        <div class="calendar-day">9</div>
-                        <div class="calendar-day">10</div>
-                        <div class="calendar-day selected">11</div>
-                        <div class="calendar-day">12</div>
-                        <div class="calendar-day">13</div>
-                        <div class="calendar-day">14</div>
-                        <div class="calendar-day">15</div>
-
-                        <!-- Fourth week -->
-                        <div class="calendar-day">16</div>
-                        <div class="calendar-day">17</div>
-                        <div class="calendar-day">18</div>
-                        <div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div>
-                        <div class="calendar-day">21</div>
-                        <div class="calendar-day">22</div>
-
-                        <!-- Fifth week -->
-                        <div class="calendar-day">23</div>
-                        <div class="calendar-day">24</div>
-                        <div class="calendar-day">25</div>
-                        <div class="calendar-day">26</div>
-                        <div class="calendar-day">27</div>
-                        <div class="calendar-day">28</div>
-                        <div class="calendar-day">29</div>
-
-                        <!-- Sixth week -->
-                        <div class="calendar-day">30</div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                        <div class="calendar-day disabled"></div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="pickup-date">Pickup Date</label>
-                    <input type="date" id="pickup-date" name="pickup-date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="return-date">Return Date</label>
-                    <input type="date" id="return-date" name="return-date" required>
-                </div>
-
-                <div class="form-submit">
-                    <button type="submit" class="button">Book Now</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions about our stroller rental service? Reach out to us!</p>
-            <p>Email: info@teddystroller.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/teddystroller" class="social-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
-                    </svg>
-                    Follow us on Instagram
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Contact Section is now part of the hero -->
+    <!-- End of hero section -->
 </body>
 </html>
