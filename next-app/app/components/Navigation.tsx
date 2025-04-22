@@ -25,6 +25,9 @@ export default function Navigation() {
             <Link href="/" className="px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               Home
             </Link>
+            <Link href="/value-proposition" className="px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Value Proposition
+            </Link>
             <Link href="#about" className="px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               About
             </Link>
@@ -86,6 +89,9 @@ export default function Navigation() {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
             Home
+          </Link>
+          <Link href="/value-proposition" className="block px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            Value Proposition
           </Link>
           <Link href="#about" className="block px-3 py-2 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
             About
